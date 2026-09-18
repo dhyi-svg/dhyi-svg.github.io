@@ -1,28 +1,23 @@
 # Site settings
-locale                   : "en-US"
-title                    : "David Yi"
-title_separator          : "-"
-name                     : &name "David Yi"
-description              : &description "Assistive robotics research at the Carnegie Mellon Robotics Institute."
-url                      : "https://dhyi-svg.github.io"
-baseurl                  : ""
-repository               : "dhyi-svg/dhyi-svg.github.io"
+locale: "en-US"
+title: "David Yi"
+title_separator: "-"
+name: "David Yi"
+description: "Assistive robotics research at the Carnegie Mellon Robotics Institute."
+url: "https://dhyi-svg.github.io"
+baseurl: ""
+repository: "dhyi-svg/dhyi-svg.github.io"
 
-# Site author (this is the sidebar)
+# Sidebar author profile
 author:
-  avatar           : "profile.jpg"
-  name             : *David Yi
-  pronouns         :
-  bio              : "Statistics &amp; Machine Learning undergraduate at Carnegie Mellon"
-  location         : "Pittsburgh, PA"
-  employer         : "Carnegie Mellon University"
-  uri              :
-  email            : "dhyi@andrew.cmu.edu"
-  github           : "dhyi-svg"
-  linkedin         : "davidy2519"
-  googlescholar    :
-  orcid            :
-  twitter          :
+  name: "David Yi"
+  avatar: "profile.jpg"
+  bio: "Statistics and Machine Learning undergraduate at Carnegie Mellon"
+  location: "Pittsburgh, PA"
+  employer: "Carnegie Mellon University"
+  email: "dhyi@andrew.cmu.edu"
+  github: "dhyi-svg"
+  linkedin: "davidy2519"
 
 # Reading files
 include:
@@ -65,15 +60,15 @@ lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-# Markdown Processing
+# Markdown processing
 kramdown:
   input: GFM
   hard_wrap: false
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  toc_levels: "1..6"
+  smart_quotes: "lsquo,rsquo,ldquo,rdquo"
   enable_coderay: false
 
 # Collections
@@ -84,30 +79,28 @@ collections:
 
 # Defaults
 defaults:
-  # _pages
   - scope:
       path: ""
-      type: pages
+      type: "pages"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
-  # _portfolio
   - scope:
       path: ""
-      type: portfolio
+      type: "portfolio"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
       share: true
 
-# Sass/SCSS
+# Sass
 sass:
-  sass_dir: _sass
-  style: compressed
+  sass_dir: "_sass"
+  style: "compressed"
 
 # Outputting
 permalink: /:categories/:title/
-timezone: America/New_York
+timezone: "America/New_York"
 
 # Plugins
 plugins:
@@ -116,17 +109,11 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jemoji
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jemoji
 
 # Archives
 category_archive:
-  type: liquid
+  type: "liquid"
   path: /categories/
 tag_archive:
-  type: liquid
+  type: "liquid"
   path: /tags/
