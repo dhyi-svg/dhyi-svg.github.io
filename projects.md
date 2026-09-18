@@ -8,7 +8,7 @@ author_profile: true
 
 *ROS2 · Python · YOLO · RealSense · Kinova Kortex · Jetson Orin Nano*
 
-A full pipeline taking a wheelchair-mounted Kinova Gen3 from camera frame to grasp: detect the bottle, locate it in 3D, transform into the arm's frame, check reachability, pick it up, and hand it to a person.
+A full pipeline taking a wheelchair-mounted Kinova Gen3 from camera frame to grasp: detect the bottle, locate it in 3D coordinates, use Inverse Kinematics, check reachability, pick it up, and hand it to a person.
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/XVQrVZTlzw8" frameborder="0" allowfullscreen></iframe>
 
