@@ -28,14 +28,10 @@ A full pipeline taking a wheelchair-mounted Kinova Gen3 from camera frame to gra
 
 *Consecutive picks, sped up. Repeatability across attempts and bottle positions.*
 
-## Assistive feeding pipeline
+## Feeding-deployment stack — RAMMP ATDev
 
-*In progress — December 2026 demo*
-
-Autonomous feeding task on a wheelchair-mounted Kinova Gen3, extending the manipulation stack above.
-
-## Feeding-deployment stack — EmPRISE Lab
-
+*In progress: December 2026 demo*
 *ROS2 · RoboStack · Kinova Gen3*
+n progress — December 2026 demo
 
 Deployment work for a microwave door-opening task. Set up and stabilized the ROS2 environment across Jetson and desktop machines, resolved dependency and driver conflicts, and contributed a fix upstream.
