@@ -10,12 +10,23 @@ author_profile: true
 
 A full pipeline taking a wheelchair-mounted Kinova Gen3 from camera frame to grasp: detect the bottle, locate it in 3D, transform into the arm's frame, check reachability, pick it up, and hand it to a person.
 
-<video src="/files/demo.mp4" controls width="100%"></video>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/XVQrVZTlzw8" frameborder="0" allowfullscreen></iframe>
 
-- Fine-tuned yolo11s-seg to ~0.93 mIoU at 12–18 FPS on a Jetson Orin Nano, after benchmarking YOLO11 and YOLO26 segmentation variants for on-device use
-- Built and labeled the ~350-image training dataset with Roboflow and SAM2
-- Performed hand-eye calibration and depth-to-3D projection; added a RealSense camera as a fallback when the arm's onboard vision module failed
-- Moved arm control from MoveIt to the Kortex API for real-time performance, with EMA pose filtering, track-locking, retry logic, and pause/resume services for safe handoff
+*Full sequence: detection through grasp and handoff.*
+
+### How it works
+
+- **Detection.** Fine-tuned yolo11s-seg to ~0.93 mIoU at 12–18 FPS on a Jetson Orin Nano, after benchmarking YOLO11 and YOLO26 segmentation variants for on-device use. Built and labeled the ~350-image training dataset with Roboflow and SAM2.
+- **Localization.** Depth-to-3D projection and hand-eye calibration to put the bottle in the arm's frame. Added a RealSense camera as a fallback when the arm's onboard vision module failed.
+- **Control.** Moved from MoveIt to the Kortex API for real-time performance, with EMA pose filtering, track-locking, IK reachability checks, retry logic, and pause/resume services for safe handoff.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/YyiRctdmvDQ" frameborder="0" allowfullscreen></iframe>
+
+*Wrist camera and external view side by side.*
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/3mA2wpvwTL4" frameborder="0" allowfullscreen></iframe>
+
+*Consecutive picks, sped up. Repeatability across attempts and bottle positions.*
 
 ## Assistive feeding pipeline
 
