@@ -16,7 +16,7 @@ A full pipeline taking a wheelchair-mounted Kinova Gen3 from camera frame to gra
 
 ### How it works
 
-- **Detection.** Fine-tuned yolo11s-seg to ~0.93 mIoU at 12–18 FPS on a Jetson Orin Nano, after benchmarking YOLO11 and YOLO26 segmentation variants for on-device use. Built and labeled the ~350-image training dataset with Roboflow and SAM2.
+- **Detection.** Fine-tuned yolo11s-seg to ~0.93 mIoU at 12–18 FPS on a Jetson Orin Nano, after benchmarking YOLO11 and YOLO26 segmentation variants for on-device use. Built and labeled the ~350-image training dataset with Roboflow.
 - **Localization.** Depth-to-3D projection and hand-eye calibration to put the bottle in the arm's frame. Added a RealSense camera as a fallback when the arm's onboard vision module failed.
 - **Control.** Moved from MoveIt to the Kortex API for real-time performance, with EMA pose filtering, track-locking, IK reachability checks, retry logic, and pause/resume services for safe handoff.
 
